@@ -1,9 +1,9 @@
 /*
 Filename : App.js
 @author Aayushi Shah
-@date June 10,2016
+@date August 5,2016
 StudentID : 300874124
-website : http://finalassignment2.azurewebsites.net/
+website : http://comp125-s2016-300874124-assignment3.azurewebsites.net/
 @description : This file is the main javascript file for this web site
 */
 /* main javascript file  */
@@ -62,15 +62,12 @@ website : http://finalassignment2.azurewebsites.net/
 
     }
 
-    // assignment 3
+    // assignment 3 starts here
      var xhrMyData;
-    /**
-     * This function reads data from the paragraphs.json file and aligns them with their 
-     * respective ID's with the innerHTML using the if statement 
-     * 
-     * @method readData
-     * @return void
-     */
+    
+    //This function reads data from the paragraphs.json file and aligns them with their 
+     // respective ID's with the innerHTML using the if statement 
+
     function readData() {
         if ((xhrMyData.readyState === 4) && (xhrMyData.status === 200)) {
 
@@ -86,11 +83,9 @@ website : http://finalassignment2.azurewebsites.net/
             }, this);
         }
     }
-    /*
-    This functions loads data from the paragraph.json file to the html file
-    @method loadData
-    @return void
-    */
+    
+    //This functions loads data from the paragraph.json file to the html file
+    
     function loadData(){
         xhrMyData = new XMLHttpRequest();
         xhrMyData.open("GET","Scripts/paragraphs.json",true);
@@ -105,17 +100,3 @@ website : http://finalassignment2.azurewebsites.net/
     window.addEventListener("load",init);
 })();
 
-/*
-    // data for my pages
-    paragraphs[0] = "My name is <strong>Aayushi Shah</strong>. I am from India. I am studying <strong>Software Engineering Technology</strong> at Centennial College. I want to become an outstanding Software Engineer after completing my course. I want to get a degree from a renowned university after graduating from this course. Other than my field, I like mathematics subject the most.";
-    paragraphs[1] = "Reading inspirational books is my hobby. This book <strong>WINGS OF FIRE</strong> is the best book I have ever read. It is basically the autobiography of APJ Abdul Kalam who was a great person and had been one of the best Presidents of India.";
-    paragraphs[2] = "I like to <strong>travel</strong> to new and exciting places. I like visiting the places which are in the lap of nature. I feel like heaven by travelling such places. I had been to many places such as Kashmir."
-    paragraphs[3] = "I love <strong>painting</strong>. I like to draw village scenes the most. I have sketched some natural scenes, mostly the sunsets. Painting gives me inner peace."
-    
-    // if paragraph exists then populate each paragraph on this page
-    for (var index = 0; index < paragraphElements.length; index++) {
-        if (paragraphElements[index]) {
-            paragraphElements[index].innerHTML = paragraphs[index];
-        }
-    }
-*/

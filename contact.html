@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<!--
+Filename : contact.html
+@author Aayushi Shah
+@date June 10,2016
+StudentID : 300874124
+website : http://finalassignment2.azurewebsites.net/
+@description : This page is the Contact Me page for this web site
+*/
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Me</title>
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="Contents\css\bootstrap.min.css">
+    <!--
+    <link rel="stylesheet" href="Contents\css\bootstrap-theme.min.css">
+    -->
+    <link rel="stylesheet" href="Contents\css\font-awesome.min.css">
+    <link rel="stylesheet" href="Contents\App.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-pencil-square fa-lg" aria-hidden="true"></i> Assignment 2</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><i class="fa fa-user fa-lg" aria-hidden="true"></i> About Me</a></li>
+                    <li><a href="projects.html"><i class="fa fa-folder fa-lg" aria-hidden="true"></i> Projects</a></li>
+                    <li class="active"><a href="contact.html"><i class="fa fa-phone-square fa-lg" aria-hidden="true"></i> Contact Me</a></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <p id="contactPara">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    
+                    <!--Contact Form-->
+                    
+                    <h1>Contact Me</h1>
+
+                    <form id="contactForm" action="" role="form">
+                        <legend>Contact Form</legend>
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" class="form-control" id="contactNumber" placeholder="Enter Contact Number"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea cols="3" rows="3" class="form-control" id="message" placeholder="Enter Your Message here..."required></textarea>
+                        </div>
+
+                        <div class="text-right">
+                            <a id="cancelButton" href="index.html" class="btn btn-warning">Cancel</a>
+                            <button id="sendButton" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </p>
+    </div>
+    </div>
+
+
+
+    <!-- JavaScript Section -->
+    <script src="Scripts\jquery-2.2.4.min.js"></script>
+    <script src="Scripts\bootstrap.min.js"></script>
+    <script src="Scripts\App.js"></script>
+    <script src="Scripts\paragraphs.json"></script>
+</body>
+
+</html>

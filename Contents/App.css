@@ -1,0 +1,19 @@
+
+/*
+Filename : App.css
+@author Aayushi Shah
+@date June 10,2016
+StudentID : 300874124
+website : http://finalassignment2.azurewebsites.net/
+@description : This file is the main css file for this web site
+*/
+/* custom css goes here */
+
+/*About me page*/
+#logo{float:left}
+#Mypic{float:right}
+
+/*Projects Page*/
+#Book{float: right;margin-right: 200px}
+#Travelling{float: right;margin-right: 200px;margin-left: 15px}
+#Painting{float: right;margin-right: 200px}

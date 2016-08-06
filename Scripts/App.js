@@ -62,39 +62,50 @@ website : http://finalassignment2.azurewebsites.net/
 
     }
 
-    //assignment 3
-    var xhrParContents;
-     
-     function readData(){
-         if ((xhrParContents.readyState === 4) && (xhrParContents.status === 200)) {
+    // assignment 3
+     var xhrMyData;
+    /**
+     * This function reads data from the paragraphs.json file and aligns them with their 
+     * respective ID's with the innerHTML using the if statement 
+     * 
+     * @method readData
+     * @return void
+     */
+    function readData() {
+        if ((xhrMyData.readyState === 4) && (xhrMyData.status === 200)) {
 
-             var ParContents = JSON.parse(xhrParContents.responseText);
-             var paragraphs = ParContents.paragraphs;
-             paragraphs.forEach(function (paragraph) {
-                 var paragraphElement = document.getElementById(paragraph.id);
-                 if(paragraphElement){
-                     paragraphElement.innerHTML = paragraph.content;
-                 }
-             },this);
-         }
-     }
-
-     function loadData(){
-         xhrParContents = new XMLHttpRequest();
-         xhrParContents.open("GET","Scripts/paragraphs.json",true);
-         xhrParContents.send(null);
-         xhrParContents.addEventListener("readystatechange",readData);
-     }
-     function init(){
-         loadData();
+            var MyData = JSON.parse(xhrMyData.responseText);
+            var paragraphs = MyData.paragraphs;
+            paragraphs.forEach(function (paragraph) {
+                var paragraphElements = document.getElementById(paragraph.id);
+                //looks for the element id and aligns it with the paragraphs in the html
+                if(paragraphElements) {
+                     paragraphElements.innerHTML = paragraph.content;
+                }
+               
+            }, this);
+        }
+    }
+    /*
+    This functions loads data from the paragraph.json file to the html file
+    @method loadData
+    @return void
+    */
+    function loadData(){
+        xhrMyData = new XMLHttpRequest();
+        xhrMyData.open("GET","Scripts/paragraphs.json",true);
+        xhrMyData.send(null);
+        xhrMyData.addEventListener("readystatechange",readData);
+    }
+    function init() { 
+     //calls the loadData function 
+        loadData();
      };
-
-     window.addEventListener("load",init);
+     //loads the init function after loading all the html functions 
+    window.addEventListener("load",init);
 })();
 
 /*
-
-
     // data for my pages
     paragraphs[0] = "My name is <strong>Aayushi Shah</strong>. I am from India. I am studying <strong>Software Engineering Technology</strong> at Centennial College. I want to become an outstanding Software Engineer after completing my course. I want to get a degree from a renowned university after graduating from this course. Other than my field, I like mathematics subject the most.";
     paragraphs[1] = "Reading inspirational books is my hobby. This book <strong>WINGS OF FIRE</strong> is the best book I have ever read. It is basically the autobiography of APJ Abdul Kalam who was a great person and had been one of the best Presidents of India.";
@@ -107,7 +118,4 @@ website : http://finalassignment2.azurewebsites.net/
             paragraphElements[index].innerHTML = paragraphs[index];
         }
     }
-
-
-})(); 
 */
